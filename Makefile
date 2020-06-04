@@ -8,6 +8,7 @@ CUDA_TAG:=$(CUDA_VERSION)-$(TYPE)-$(BASE_OS)
 ROOT_CONTAINER:=nvidia/cuda:$(CUDA_TAG)
 
 # put `-gpu` suffix on every image
+# base-notebook-$(CUDA_TAG) may be good if you want
 BASE_CONTAINER:=$(OWNER)/base-notebook-gpu
 
 build/base-notebook: BUILD_ARG:=ROOT_CONTAINER=$(ROOT_CONTAINER)
