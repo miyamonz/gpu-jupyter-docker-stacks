@@ -1,7 +1,7 @@
 OWNER:=miyamonz
 
 # see https://hub.docker.com/r/nvidia/cuda
-CUDA_VERSION:=10.2
+CUDA_VERSION:=10.1
 TYPE:=cudnn7-devel
 BASE_OS:=ubuntu18.04
 CUDA_TAG:=$(CUDA_VERSION)-$(TYPE)-$(BASE_OS)
