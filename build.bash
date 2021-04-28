@@ -1,7 +1,7 @@
 #!/bin/bash
 OWNER=miyamonz
 
-CUDA_VERSION=10.1
+CUDA_VERSION=10.0
 TYPE=cudnn7-devel
 BASE_OS=ubuntu18.04
 

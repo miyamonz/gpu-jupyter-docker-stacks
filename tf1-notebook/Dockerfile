@@ -1,12 +1,10 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
-ARG BASE_CONTAINER=jupyter/scipy-notebook
+ARG BASE_CONTAINER=miyamonz/scipy-notebook-cuda10.0-cudnn7-devel-ubuntu18.04
 FROM $BASE_CONTAINER
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="miyamonz"
 
 # Install Tensorflow
 RUN pip install --quiet --no-cache-dir \
-    'tensorflow==2.4.1' && \
+    'tensorflow<2' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
