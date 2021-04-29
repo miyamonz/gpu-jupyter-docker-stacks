@@ -19,3 +19,4 @@ PYTHON_VERSION=${PYTHON_VERSION} \
 BASE_CONTAINER=${OWNER}/scipy-notebook-${SUFFIX}
 IMAGE_NAME=${OWNER}/tf1-notebook-${SUFFIX}
 docker build --build-arg BASE_CONTAINER=$BASE_CONTAINER --rm --force-rm -t $IMAGE_NAME:latest $SCRIPTPATH
+docker tag $IMAGE_NAME $OWNER/tf1-notebook-gpu
