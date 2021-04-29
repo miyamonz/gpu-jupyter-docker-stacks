@@ -17,7 +17,7 @@ build() {
     local ROOT_CONTAINER=nvidia/cuda:${CUDA_TAG}
     local BUILD_ARG="ROOT_CONTAINER=${ROOT_CONTAINER}"
 
-    local BASE_CONTAINER=scify-notebook
+    local BASE_CONTAINER=scipy-notebook
     BUILD_ARG+=" BASE_CONTAINER=${OWNER}/${BASE_CONTAINER}-${SUFFIX}"
 
     BUILD_ARG=`echo $BUILD_ARG | tr ' ' "\n" | awk '{print "--build-arg " $0}' | tr "\n" ' '`
