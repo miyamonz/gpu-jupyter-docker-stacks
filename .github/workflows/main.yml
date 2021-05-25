@@ -25,9 +25,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: build
-        run: |
-          tf1-notebook/build.bash
-          export TAGNAME=$(<tf1-notebook/.tag)
-          docker push $TAGNAME
+        name: build and push
+        uses: .github/actions/build.yml
+        with:
+          folder: tf1-notebook
 
