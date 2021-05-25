@@ -6,9 +6,9 @@ runs:
   using: "composite"
   steps:
     -
-      name: build
       run: |
         ${{ inputs.folder }}/build.bash
         export TAGNAME=$(<${{ inputs.folder }}/.tag)
         docker push $TAGNAME
+      shell: bash
 

@@ -28,5 +28,5 @@ jobs:
         name: build and push
         uses: ./.github/build-and-push
         with:
-          folder: tf1-notebook
+          folder: 'tf1-notebook'
 
