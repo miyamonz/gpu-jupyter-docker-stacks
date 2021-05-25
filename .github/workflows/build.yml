@@ -28,4 +28,6 @@ jobs:
         name: build
         run: |
           tf1-notebook/build.bash
+          export TAGNAME=$(<tf1-notebook/.tag)
+          docker push $TAGNAME
 

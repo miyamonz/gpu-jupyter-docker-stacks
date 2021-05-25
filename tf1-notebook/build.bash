@@ -22,3 +22,4 @@ NB_NAME=tf1-notebook
 IMAGE_NAME=${OWNER}/${NB_NAME}-${SUFFIX}
 docker build --build-arg BASE_CONTAINER=$BASE_CONTAINER --rm --force-rm -t $IMAGE_NAME:latest $SCRIPTPATH
 docker tag $IMAGE_NAME $OWNER/${NB_NAME}-gpu
+echo $OWNER/${NB_NAME}-gpu > $SCRIPTPATH/.tag
