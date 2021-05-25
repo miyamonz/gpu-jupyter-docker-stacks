@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: build and push
-        uses: .github/actions/build.yml
+        uses: ./.github/build-and-push
         with:
           folder: tf1-notebook
 
