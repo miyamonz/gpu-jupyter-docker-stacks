@@ -5,7 +5,7 @@ OWNER=miyamonz
 
 CUDA_VERSION=11.1
 TYPE=cudnn8-devel
-BASE_OS=ubuntu20.04
+BASE_OS=ubuntu18.04
 CUDA_TAG=${CUDA_VERSION}-${TYPE}-${BASE_OS}
 
 SUFFIX="cuda$CUDA_TAG"
