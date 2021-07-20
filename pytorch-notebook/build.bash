@@ -3,9 +3,9 @@ REPOROOT=$(realpath $(dirname $0)/..)
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 OWNER=miyamonz
 
-CUDA_VERSION=10.2
-TYPE=cudnn7-devel
-BASE_OS=ubuntu18.04
+CUDA_VERSION=11.1
+TYPE=cudnn8-devel
+BASE_OS=ubuntu20.04
 CUDA_TAG=${CUDA_VERSION}-${TYPE}-${BASE_OS}
 
 SUFFIX="cuda$CUDA_TAG"
