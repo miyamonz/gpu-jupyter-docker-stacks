@@ -20,6 +20,7 @@ RUN pip install --quiet --no-cache-dir \
     fugashi \
     ipadic \
     mecab-python3 \
+    transformers \
     'tensorflow-gpu==1.15' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
